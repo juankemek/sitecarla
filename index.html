@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carla Corrêa | Studio & Academia de Unhas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            // Ajustando tons para focar no vermelho carmim da logo e marrom escuro
+                            red: '#7B1822', // Vermelho vinho da logo
+                            redDark: '#5A0F15',
+                            redLight: '#9E2430',
+                            brown: '#3A231C', // Marrom escuro complementar
+                            brownDark: '#20110D',
+                            brownLight: '#6B4A3E',
+                            nude: '#F9F4F2', // Fundo claro e neutro
+                            gold: '#C5A059' // Dourado para detalhes (opcional)
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Detalhes visuais customizados */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #7B1822, #3A231C);
+        }
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .btn-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(123, 24, 34, 0.3);
+        }
+    </style>
+</head>
+<body class="font-sans text-brand-brownDark bg-brand-nude antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="fixed w-full top-0 z-50 glass-effect border-b border-brand-red/10 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-red flex items-center justify-center text-white font-serif italic font-bold text-xl leading-none">
+                        CC
+                    </div>
+                    <a href="#" class="font-serif text-xl font-bold text-brand-brownDark hidden sm:block">
+                        Canail<span class="text-brand-red">Academy</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#sobre" class="text-sm font-medium text-brand-brown hover:text-brand-red transition-colors">Sobre</a>
+                    <a href="#servicos" class="text-sm font-medium text-brand-brown hover:text-brand-red transition-colors">Serviços</a>
+                    <a href="#diferenciais" class="text-sm font-medium text-brand-brown hover:text-brand-red transition-colors">Diferenciais</a>
+                    <a href="#depoimentos" class="text-sm font-medium text-brand-brown hover:text-brand-red transition-colors">Depoimentos</a>
+                    <a href="#contato" class="text-sm font-medium text-brand-brown hover:text-brand-red transition-colors">Localização</a>
+                    <a href="https://wa.me/554892077490" target="_blank" class="px-5 py-2.5 rounded-full bg-brand-red text-white text-sm font-medium hover:bg-brand-redDark btn-hover-effect flex items-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Agendar
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-red hover:text-brand-redDark focus:outline-none p-2">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-brand-red/10 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#sobre" class="block px-3 py-3 text-base font-medium text-brand-brown hover:bg-brand-nude hover:text-brand-red rounded-md">Sobre</a>
+                <a href="#servicos" class="block px-3 py-3 text-base font-medium text-brand-brown hover:bg-brand-nude hover:text-brand-red rounded-md">Serviços</a>
+                <a href="#diferenciais" class="block px-3 py-3 text-base font-medium text-brand-brown hover:bg-brand-nude hover:text-brand-red rounded-md">Diferenciais</a>
+                <a href="#depoimentos" class="block px-3 py-3 text-base font-medium text-brand-brown hover:bg-brand-nude hover:text-brand-red rounded-md">Depoimentos</a>
+                <a href="#contato" class="block px-3 py-3 text-base font-medium text-brand-brown hover:bg-brand-nude hover:text-brand-red rounded-md">Localização</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-nude">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-red/5 rounded-bl-[100px] -z-10 hidden lg:block"></div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-12">
+            
+            <!-- Text Content -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left z-10">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/10 text-brand-red text-sm font-semibold mb-6 border border-brand-red/20">
+                    <i class="fas fa-star text-brand-gold text-xs"></i> Studio & Academia de Unhas
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-brand-brownDark leading-tight mb-6">
+                    O seu lugar no <br>
+                    <span class="text-brand-red italic">mundo das unhas</span> 💅🏼
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 font-light">
+                    Seja cliente ou aluna. Cursos, mentorias, posicionamento e serviços de alto padrão com a educadora Carla Corrêa.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                    <a href="https://wa.me/554892077490" target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-red text-white font-medium text-lg hover:bg-brand-redDark btn-hover-effect flex items-center justify-center gap-2 shadow-lg shadow-brand-red/30">
+                        Fale com a Equipe <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#servicos" class="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border-2 border-brand-red/20 text-brand-red font-medium text-lg hover:bg-brand-red/5 transition-colors flex items-center justify-center">
+                        Conhecer Serviços
+                    </a>
+                </div>
+            </div>
+
+            <!-- Image/Visual -->
+            <div class="w-full lg:w-1/2 relative z-10">
+                <div class="relative rounded-[2rem] overflow-hidden aspect-[4/5] max-w-md mx-auto shadow-2xl border-8 border-white">
+                    <img src="SaveClip.App_729115785_18114465610760800_2654437736661708608_n.jpg" alt="Carla Corrêa" class="w-full h-full object-cover">
+                    <!-- overlay gradient subtle -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-brownDark/60 via-transparent to-transparent"></div>
+                    
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl text-brand-brownDark shadow-lg">
+                        <p class="font-serif font-bold text-lg text-brand-red mb-1">Carla Corrêa</p>
+                        <p class="text-sm font-medium">Educadora @nailsdosecreto</p>
+                    </div>
+                </div>
+                <!-- Decor Elements -->
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-brand-red/10 rounded-full blur-2xl -z-10"></div>
+                <div class="absolute -top-6 -left-6 w-24 h-24 bg-brand-brown/10 rounded-full blur-xl -z-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="relative order-2 lg:order-1 flex justify-center">
+                    <!-- Decor element -->
+                    <div class="absolute inset-0 bg-brand-red/5 rounded-3xl transform rotate-3 scale-105 -z-10"></div>
+                    <img src="SaveClip.App_756661757_18119602330760800_6375455394327670895_n.jpg" alt="Trabalho de alongamento de unhas por Carla Corrêa" class="rounded-3xl shadow-xl w-full max-w-lg object-cover border border-gray-100">
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-sm font-bold tracking-widest text-brand-red uppercase mb-3">Nossa História</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-brand-brownDark mb-6">
+                        Muito mais que estética, <br>
+                        <span class="text-brand-red">um compromisso com a excelência.</span>
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Bem-vinda ao seu novo espaço favorito. Sou <strong>Carla Corrêa</strong>, fundadora da Canail Academy, criadora do método @nailsdosecreto e apaixonada por transformar vidas através do universo das unhas.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Nosso propósito é duplo: oferecer a você, cliente, um atendimento impecável que realça sua beleza única, e guiar você, aluna, na construção de uma carreira sólida, rentável e reconhecida através dos nossos cursos, mentorias e estratégias de posicionamento.
+                    </p>
+                    
+                    <div class="grid grid-cols-3 gap-4 border-t border-gray-100 pt-8">
+                        <div>
+                            <h4 class="font-serif text-2xl font-bold text-brand-red mb-1">Cursos</h4>
+                            <p class="text-xs text-gray-500 font-medium uppercase">Formação Completa</p>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-2xl font-bold text-brand-red mb-1">Mentoria</h4>
+                            <p class="text-xs text-gray-500 font-medium uppercase">Posicionamento</p>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-2xl font-bold text-brand-red mb-1">Studio</h4>
+                            <p class="text-xs text-gray-500 font-medium uppercase">Atendimento Premium</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="py-24 bg-brand-nude/50 border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-red uppercase mb-3">O que oferecemos</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-brand-brownDark mb-6">
+                    Seja Cliente ou Aluna
+                </h3>
+                <p class="text-gray-600">
+                    Soluções completas desenhadas para proporcionar a melhor experiência estética e a mais profunda capacitação profissional.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-red/5 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-red/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors">
+                        <i class="fas fa-hand-sparkles text-2xl text-brand-red group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-brand-brownDark mb-3">Atendimento Studio</h4>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Alongamentos, blindagem, banho de gel e manutenções com acabamento impecável, durabilidade e total segurança para a saúde das suas unhas.
+                    </p>
+                    <a href="https://wa.me/554892077490?text=Olá, gostaria de agendar um horário no Studio!" target="_blank" class="text-brand-red font-semibold text-sm hover:text-brand-redDark flex items-center gap-2">
+                        Agendar Horário <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gradient-to-br from-brand-red to-brand-redDark rounded-3xl p-8 shadow-lg transform lg:-translate-y-4 relative overflow-hidden">
+                    <!-- overlay pattern -->
+                    <div class="absolute inset-0 bg-white/5 opacity-50" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    
+                    <div class="absolute top-0 right-0 bg-white text-brand-red text-xs font-bold px-4 py-1.5 rounded-bl-xl rounded-tr-3xl uppercase tracking-wider z-10 shadow-sm">
+                        Método Exclusivo
+                    </div>
+                    <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-6 relative z-10">
+                        <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-white mb-3 relative z-10">Cursos Presenciais</h4>
+                    <p class="text-white/90 mb-6 text-sm leading-relaxed relative z-10">
+                        Capacitação completa com a educadora @nailsdosecreto. Aprenda o método validado, do preparo ideal ao acabamento de alto nível.
+                    </p>
+                    <a href="https://wa.me/554892077490?text=Olá, gostaria de informações sobre os cursos!" target="_blank" class="text-white font-semibold text-sm hover:text-white/80 flex items-center gap-2 relative z-10">
+                        Saber Mais <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-red/5 group hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-brand-red/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors">
+                        <i class="fas fa-chart-line text-2xl text-brand-red group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h4 class="text-xl font-serif font-bold text-brand-brownDark mb-3">Mentoria & Posicionamento</h4>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Destrave sua carreira. Mentoria focada em gestão de studio, captação de clientes, marketing digital e posicionamento de imagem.
+                    </p>
+                    <a href="https://wa.me/554892077490?text=Olá, gostaria de saber mais sobre a mentoria de posicionamento!" target="_blank" class="text-brand-red font-semibold text-sm hover:text-brand-redDark flex items-center gap-2">
+                        Quero Evoluir <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="diferenciais" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Item -->
+                    <div class="bg-brand-nude/50 p-6 rounded-2xl border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-brand-red shadow-sm">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-brownDark mb-2">Biossegurança Rigorosa</h4>
+                        <p class="text-sm text-gray-600">Materiais 100% descartáveis ou esterilizados, garantindo total segurança e saúde.</p>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-brand-nude/50 p-6 rounded-2xl border border-gray-100 sm:translate-y-8">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-brand-red shadow-sm">
+                            <i class="fas fa-gem text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-brownDark mb-2">Produtos Premium</h4>
+                        <p class="text-sm text-gray-600">Utilizamos apenas as melhores marcas do mercado para garantir durabilidade impecável.</p>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-brand-nude/50 p-6 rounded-2xl border border-gray-100">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-brand-red shadow-sm">
+                            <i class="fas fa-chalkboard-teacher text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-brownDark mb-2">Método @nailsdosecreto</h4>
+                        <p class="text-sm text-gray-600">Didática exclusiva e comprovada para alunas, acelerando o aprendizado real na mesa.</p>
+                    </div>
+                    <!-- Item -->
+                    <div class="bg-brand-nude/50 p-6 rounded-2xl border border-gray-100 sm:translate-y-8">
+                        <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center mb-4 text-brand-red shadow-sm">
+                            <i class="fas fa-heart text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-brand-brownDark mb-2">Ambiente Acolhedor</h4>
+                        <p class="text-sm text-gray-600">Um espaço pensado para o seu conforto, proporcionando uma verdadeira experiência.</p>
+                    </div>
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-sm font-bold tracking-widest text-brand-red uppercase mb-3">Por que nós?</h2>
+                    <h3 class="text-3xl md:text-4xl font-serif font-bold text-brand-brownDark mb-6">
+                        O Padrão <br>Canail Academy
+                    </h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Não entregamos apenas unhas feitas, entregamos uma experiência transformadora. Seja no cuidado com as suas mãos ou na construção do seu futuro profissional.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Tudo aqui é pautado em qualidade técnica extrema, biossegurança inegociável e uma visão clara de posicionamento e valorização.
+                    </p>
+                    <a href="https://wa.me/554892077490" target="_blank" class="inline-flex px-6 py-3 rounded-full bg-brand-red/10 text-brand-red font-semibold hover:bg-brand-red hover:text-white transition-colors items-center gap-2">
+                        Fale com a Carla <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="py-24 bg-brand-brownDark text-white relative overflow-hidden">
+        <!-- Decor pattern -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-red rounded-full mix-blend-multiply filter blur-[100px] opacity-40 transform translate-x-1/3 -translate-y-1/3"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-redLight rounded-full mix-blend-multiply filter blur-[100px] opacity-30 transform -translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold tracking-widest text-brand-redLight uppercase mb-3">Relatos</h2>
+                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-6">O que dizem sobre nós</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i class="fas fa-quote-left text-3xl text-brand-redLight/60 mb-4"></i>
+                    <p class="text-white/90 text-sm leading-relaxed mt-2 mb-6 italic font-light">
+                        "Fazer as unhas com a Carla não é só um serviço estético, é uma terapia! O capricho, a durabilidade do alongamento... Nunca tive unhas tão lindas e naturais."
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-white/10 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-red/30 flex items-center justify-center text-white font-bold text-sm">M</div>
+                        <div>
+                            <p class="font-bold text-sm">Mariana S.</p>
+                            <p class="text-xs text-white/60">Cliente do Studio</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Depoimento 2 -->
+                <div class="bg-brand-red p-8 rounded-3xl border border-brand-redLight shadow-xl transform md:-translate-y-4">
+                    <i class="fas fa-quote-left text-3xl text-white/40 mb-4"></i>
+                    <p class="text-white text-sm leading-relaxed mt-2 mb-6 italic font-medium">
+                        "O curso de aperfeiçoamento abriu minha mente. A metodologia da Carla me deu segurança para diminuir meu tempo de mesa e cobrar o valor justo pelo meu trabalho."
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-white/20 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm">L</div>
+                        <div>
+                            <p class="font-bold text-sm">Letícia C.</p>
+                            <p class="text-xs text-white/80">Nail Designer / Aluna</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Depoimento 3 -->
+                <div class="bg-white/5 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:bg-white/10 transition-colors">
+                    <i class="fas fa-quote-left text-3xl text-brand-redLight/60 mb-4"></i>
+                    <p class="text-white/90 text-sm leading-relaxed mt-2 mb-6 italic font-light">
+                        "A mentoria de posicionamento me transformou de uma profissional comum para uma empresária do ramo de unhas. Minha agenda lotou e meu faturamento aumentou muito!"
+                    </p>
+                    <div class="flex items-center gap-4 border-t border-white/10 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-brand-red/30 flex items-center justify-center text-white font-bold text-sm">J</div>
+                        <div>
+                            <p class="font-bold text-sm">Juliana R.</p>
+                            <p class="text-xs text-white/60">Mentorada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização & Contato -->
+    <section id="contato" class="py-24 bg-brand-nude">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row border border-gray-100">
+                
+                <!-- Informações -->
+                <div class="w-full lg:w-5/12 p-10 lg:p-12 bg-white flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-sm font-bold tracking-widest text-brand-red uppercase mb-2">Contato</h2>
+                        <h3 class="font-serif text-3xl font-bold text-brand-brownDark mb-8">Venha nos visitar</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-brownDark mb-1">Endereço do Studio</h4>
+                                    <p class="text-sm text-gray-600">Consulte nossa localização exata<br>através do WhatsApp.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red flex-shrink-0">
+                                    <i class="fab fa-whatsapp text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-brownDark mb-1">WhatsApp</h4>
+                                    <p class="text-sm text-gray-600">(48) 9207-7490</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-brand-red/10 flex items-center justify-center text-brand-red flex-shrink-0">
+                                    <i class="fab fa-instagram text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-brand-brownDark mb-1">Instagram</h4>
+                                    <a href="https://instagram.com/canailacademy" target="_blank" class="text-sm text-brand-red hover:underline">@canailacademy</a><br>
+                                    <a href="https://instagram.com/nailsdosecreto" target="_blank" class="text-sm text-brand-red hover:underline">@nailsdosecreto</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <a href="https://wa.me/554892077490" target="_blank" class="w-full flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-redDark text-white font-medium py-4 rounded-xl transition-all shadow-lg shadow-brand-red/20 group">
+                            Agendar Atendimento <i class="fab fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Imagem Complementar / Ambiente -->
+                <div class="w-full lg:w-7/12 h-64 lg:h-auto relative bg-brand-brownDark">
+                    <img src="https://placehold.co/1000x800/20110D/F9F4F2?text=Ambiente+Canail+Academy" alt="Ambiente Studio" class="w-full h-full object-cover opacity-80 mix-blend-overlay">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-20"></div>
+                     <!-- Logo overlay sutil -->
+                     <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-32 h-32 rounded-full border-2 border-white/20 flex items-center justify-center text-white/30 font-serif italic font-bold text-5xl">
+                            CC
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-brownDark text-brand-nude/70 py-12 border-t-4 border-brand-red">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <div class="flex items-center gap-3 justify-center md:justify-start mb-2">
+                    <div class="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center text-white font-serif italic font-bold text-sm leading-none">
+                        CC
+                    </div>
+                    <span class="font-serif text-xl font-bold text-white">
+                        Canail<span class="text-brand-red">Academy</span>
+                    </span>
+                </div>
+                <p class="text-sm mt-2">O seu lugar no mundo das unhas.</p>
+                <p class="text-xs mt-1 text-white/50">Cursos • Mentorias • Posicionamento</p>
+            </div>
+            
+            <div class="flex gap-4">
+                <a href="https://instagram.com/canailacademy" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors" title="Instagram Canail Academy">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://instagram.com/nailsdosecreto" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors" title="Instagram Nails do Secreto">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="https://wa.me/554892077490" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-red hover:text-white transition-colors" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 text-center text-xs opacity-50 flex flex-col sm:flex-row justify-between items-center border-t border-white/10 pt-6">
+            <p>&copy; 2026 Carla Corrêa | Canail Academy. Todos os direitos reservados.</p>
+            <p class="mt-2 sm:mt-0">Design por CanailAcademy</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/554892077490" target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-lg hover:scale-110 transition-transform hover:shadow-xl focus:outline-none" aria-label="Fale conosco no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <!-- Ping effect -->
+        <span class="absolute -top-1 -right-1 flex h-4 w-4">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-4 w-4 bg-[#25D366] border-2 border-white"></span>
+        </span>
+    </a>
+
+    <!-- Scripts for Interactivity -->
+    <script>
+        // Toggle mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect (add background shadow on scroll)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('border-brand-brown/10', 'border-transparent');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('border-transparent', 'border-brand-brown/10');
+            }
+        });
+    </script>
+</body>
+</html>
